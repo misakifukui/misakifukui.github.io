@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Summer</title>
+    <script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <h1>NRT→FUK</h1>
+    <h3>8.16~8.21</h3>
+     <center>
+         <div class="main"><img src="nagahama.jpg" alt=""></div>
+         <div class="mini">
+            <img src="nagahama.jpg" alt="長濱ラーメン">
+            <img src="mizutaki.jpg" alt="水炊き">
+            <img src="gobo.jpg" alt="ごぼう天うどん">
+            <img src="pepetama.jpg" alt="ぺぺたま">
+            <img src="mentai.jpg" alt="稚加榮の明太子">
+            <img src="gyoza.jpg" alt="鉄鍋餃子">
+        </div>
+    </center>
+    
+    <script>
+        $(function(){
+            $('.mini img').hover(function(){
+                $(this).fadeTo("1000",0.5);
+            },function(){
+                $(this).fadeTo("500",1.0);
+            });
+            $('.mini img').click(function(){
+              const $thisImg = $(this).attr('src');
+              const $thisAlt = $(this).attr('alt');
+              $('.main img').attr({src:$thisImg,alt:$thisAlt});
+            });
+        });
+    </script>
+
+    <style>
+        h1{
+            text-align: center;
+            margin-bottom: -30px;
+        }
+        h3{
+            text-align: center;
+        }
+        .main img{
+            width: 500px;
+            height: 500pix;
+        }
+        .mini{
+             width:100%;
+             margin:0 auto;
+        }
+        .mini img{
+             width:10%;
+        }
+    </style>
+    
+</body>
+</html>
